@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✧⁠•精神病院-Mental Hospital•✧</title>
+    <link rel="icon" href="https://i.pinimg.com/736x/dd/f1/60/ddf16091846860ce4b6a2a39a884e71a.jpg">
+    <style>
+        :root {
+            --accent-white: #ffffff;
+            --overlay-black: rgba(0, 0, 0, 0.8);
+            --card-bg: rgba(20, 20, 20, 0.7);
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            color: var(--accent-white);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(var(--overlay-black), var(--overlay-black)), 
+                        url('https://i.pinimg.com/originals/31/e1/03/31e1037b1b30c313806263929812df66.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 8px;
+            margin: 0;
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+        }
+
+        .admin-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .admin-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 20px 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .admin-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            object-fit: cover;
+        }
+
+        .admin-info p {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.02);
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+        }
+
+        .join-btn {
+            position: relative;
+            background: #fff;
+            color: #000;
+            padding: 20px 60px;
+            text-decoration: none;
+            font-weight: 900;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            display: inline-block;
+            animation: pulse 2s infinite;
+            transition: 0.3s;
+            overflow: hidden;
+        }
+
+        .join-btn:hover {
+            transform: translateY(-3px);
+            background: #f0f0f0;
+            letter-spacing: 6px;
+        }
+
+        .join-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.2);
+            transform: rotate(45deg);
+            transition: 0.5s;
+            left: -150%;
+        }
+
+        .join-btn:hover::after {
+            left: 150%;
+        }
+
+        .id-label {
+            font-size: 0.7rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>精神病院</h1>
+        <p style="letter-spacing: 4px; opacity: 0.7;">✧⁠• Mental Hospital •✧</p>
+    </div>
+
+    <div class="admin-section">
+        <div class="admin-card">
+            <img src="https://i.pinimg.com/474x/c0/31/cf/c031cff838e3caa6f958365445e4e030.jpg" class="admin-avatar">
+            <div class="admin-info">
+                <span class="id-label">DIRECTOR</span>
+                <p>スノーベル 雨</p>
+                <span class="id-label">ID: 1231178860876533811</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-grid">
+        <div class="card">
+            <h3>✧ 尊重與包容</h3>
+            <p>100% 言論自由！這裡的人都很友善，我們提供情緒發洩與彼此安慰的空間。</p>
+        </div>
+        <div class="card">
+            <h3>✧ 社交與遊戲</h3>
+            <p>各類遊戲交流與技巧分享，不限任何內容，隨意分享你的生活點滴。</p>
+        </div>
+        <div class="card">
+            <h3>✧ 合作與宣傳</h3>
+            <p>歡迎各群主洽談合作，經院長審核後即可開啟宣傳交流。</p>
+        </div>
+        <div class="card">
+            <h3>✧ 嚴格審核制</h3>
+            <p>為防止炸群事件重演，我們有較嚴謹的入群審核，守護每位成員的環境。</p>
+        </div>
+        <div class="card">
+            <h3>✧ 自由創作</h3>
+            <p>不論是二創、繪圖還是文字，這裡歡迎所有不被理解的靈魂大膽創作。</p>
+        </div>
+        <div class="card">
+            <h3>✧ 24h 陪伴</h3>
+            <p>無論何時，語音頻道總有溫暖的聲音等著你，你不再是孤單一人。</p>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <a href="https://discord.gg/Z3yWjwa4XD" class="join-btn">立即入院</a>
+    </div>
+</div>
+
+</body>
+</html>
